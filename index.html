@@ -19,7 +19,7 @@
 
     <meta
         name="author"
-        content="MyLibro">
+        content="Brittany Gonzales Quiñonez">
 
     <title>MyLibro | Romance, fantasía y libros juveniles</title>
 
@@ -48,9 +48,112 @@
 <body class="bg-stone-50 text-stone-800">
 
 
-    <!--  1. NAVBAR-->
+    <!-- PANEL FLOTANTE DE CONTROL (ESTRUCTURA HTML) -->
 
-    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+    <button
+        id="panelToggle"
+        type="button"
+        class="btn btn-dark rounded-circle shadow-lg position-fixed d-flex align-items-center justify-content-center"
+        style="bottom: 24px; right: 24px; width: 60px; height: 60px; z-index: 1080;"
+        aria-label="Abrir estructura HTML"
+        aria-controls="panelSecciones"
+        aria-expanded="false">
+
+        <i class="bi bi-code-slash fs-3" id="panelIcon"></i>
+
+    </button>
+
+
+    <div
+        id="panelSecciones"
+        class="position-fixed bg-white shadow-lg rounded-3 p-3 d-none"
+        style="bottom: 96px; right: 24px; width: 260px; z-index: 1080;">
+
+        <p class="small text-secondary mb-2 fw-bold">
+            Estructura HTML
+        </p>
+
+        <div class="d-grid gap-2">
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace"
+                data-target="seccionNavbar">
+                &lt;nav&gt;
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace"
+                data-target="seccionHero">
+                &lt;header&gt;
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace"
+                data-target="seccionMain">
+                &lt;main&gt;
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace ps-4"
+                data-target="seccionAbout">
+                &lt;section&gt; nosotros
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace ps-4"
+                data-target="seccionBooks">
+                &lt;section&gt; libros
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace ps-4"
+                data-target="seccionSynopsis">
+                &lt;section&gt; reseñas
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace ps-4"
+                data-target="seccionFavorites">
+                &lt;section&gt; favoritos
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace ps-4"
+                data-target="seccionContact">
+                &lt;section&gt; contacto
+            </button>
+
+            <button
+                class="btn btn-outline-dark btn-sm text-start seccion-btn font-monospace"
+                data-target="seccionFooter">
+                &lt;footer&gt;
+            </button>
+
+            <hr class="my-1">
+
+            <button
+                class="btn btn-dark btn-sm text-start"
+                id="mostrarTodo">
+                Mostrar todo
+            </button>
+
+            <button
+                class="btn btn-secondary btn-sm text-start"
+                id="ocultarTodo">
+                Ocultar todo
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!--  1. NAVBAR  <nav> -->
+
+    <nav
+        id="seccionNavbar"
+        class="navbar navbar-expand-lg bg-white py-3 shadow-sm d-none">
 
         <div class="container">
 
@@ -132,6 +235,14 @@
 
                     <li class="nav-item">
                         <a
+                            href="#favorites"
+                            class="nav-link">
+                            Favoritos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
                             href="#contact"
                             class="nav-link">
                             Contacto
@@ -199,11 +310,11 @@
 
 
 
-    <!--2. HERO -->
+    <!-- 2. HERO  <header> -->
 
     <header
-        id="home"
-        class="bg-gradient-to-r from-pink-100 via-purple-50 to-sky-100">
+        id="seccionHero"
+        class="bg-gradient-to-r from-pink-100 via-purple-50 to-sky-100 d-none">
 
         <div class="container">
 
@@ -311,676 +422,110 @@
 
 
 
-    <!--  3. ABOUT US-->
+    <!--  <main> -->
 
-    <section
-        id="about"
-        class="py-5">
-
-        <div class="container py-5">
-
-            <div
-                class="row align-items-center g-5">
+    <main
+        id="seccionMain"
+        class="d-none">
 
 
-                <!-- GALERÍA -->
+        <!--  3. ABOUT US  <section> -->
 
-                <div class="col-lg-6">
+        <section
+            id="seccionAbout"
+            class="py-5 d-none">
 
-                    <div class="row g-2">
+            <div class="container py-5">
 
-                        <div class="col-6">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600"
-                                alt="Persona leyendo romance juvenil"
-                                class="img-fluid w-100 h-48 object-cover rounded-xl shadow-sm">
-
-                        </div>
+                <div
+                    class="row align-items-center g-5">
 
 
-                        <div class="col-6">
+                    <!-- GALERÍA -->
 
-                            <img
-                                src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600"
-                                alt="Libros de fantasía sobre una mesa"
-                                class="img-fluid w-100 h-48 object-cover rounded-xl shadow-sm">
+                    <div class="col-lg-6">
 
-                        </div>
+                        <div class="row g-2">
+
+                            <div class="col-6">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600"
+                                    alt="Persona leyendo romance juvenil"
+                                    class="img-fluid w-100 h-48 object-cover rounded-xl shadow-sm">
+
+                            </div>
 
 
-                        <div class="col-12">
+                            <div class="col-6">
 
-                            <img
-                                src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=900"
-                                alt="Persona leyendo una saga juvenil"
-                                class="img-fluid w-100 h-64 object-cover rounded-xl shadow-sm">
+                                <img
+                                    src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600"
+                                    alt="Libros de fantasía sobre una mesa"
+                                    class="img-fluid w-100 h-48 object-cover rounded-xl shadow-sm">
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=900"
+                                    alt="Persona leyendo una saga juvenil"
+                                    class="img-fluid w-100 h-64 object-cover rounded-xl shadow-sm">
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                </div>
 
+                    <!-- TEXTO -->
 
-                <!-- TEXTO -->
+                    <div class="col-lg-6">
 
-                <div class="col-lg-6">
+                        <p
+                            class="small text-secondary mb-2">
 
-                    <p
-                        class="small text-secondary mb-2">
+                            Sobre Nosotros
 
-                        Sobre Nosotros
+                        </p>
 
-                    </p>
-
-
-                    <h2
-                        class="display-6 fw-bold">
-
-                        Una comunidad para leer sin filtro
-
-                    </h2>
-
-
-                    <p
-                        class="text-secondary leading-relaxed">
-
-                        En MyLibro compartimos reseñas, teorías y recomendaciones
-                        de romance juvenil, fantasía épica y sagas que enganchan
-                        desde la primera página.
-
-                    </p>
-
-
-                    <p
-                        class="text-secondary leading-relaxed">
-
-                        Si amas a Blue Jeans, Sarah J. Maas o buscas tu próxima
-                        obsesión literaria, este es tu lugar.
-
-                    </p>
-
-
-                    <button
-                        class="btn btn-dark px-4 rounded-lg">
-
-                        Conoce más
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- 4. BEST SELLING BOOKS-->
-
-    <section
-        id="books"
-        class="py-5 bg-white">
-
-        <div class="container py-5">
-
-
-            <!-- ENCABEZADO -->
-
-            <div
-                class="d-flex justify-content-between align-items-center mb-4">
-
-                <h2
-                    class="fw-bold mb-0">
-
-                    Libros más vendidos
-
-                </h2>
-
-
-                <div class="d-flex gap-2">
-
-                    <button
-                        class="btn btn-dark rounded-lg">
-
-                        Comprar ahora
-
-                    </button>
-
-
-                    <button
-                        class="btn btn-outline-secondary rounded-lg"
-                        aria-label="Libro anterior">
-
-                        <i class="bi bi-chevron-left"></i>
-
-                    </button>
-
-
-                    <button
-                        class="btn btn-outline-secondary rounded-lg"
-                        aria-label="Siguiente libro">
-
-                        <i class="bi bi-chevron-right"></i>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- GRID -->
-
-            <div class="row g-4">
-
-
-                <!-- CARD 1 -->
-
-                <div
-                    class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
-                            alt="Portada del libro Canciones para Paula"
-                            class="card-img-top h-72 object-cover">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-bold">
-                                Canciones para Paula
-                            </h3>
-
-                            <p class="text-secondary mb-2">
-                                Blue Jeans
-                            </p>
-
-                            <div
-                                class="text-warning"
-                                aria-label="5 de 5 estrellas">
-
-                                ★★★★★
-
-                            </div>
-
-                            <p class="small text-secondary">
-                                Romance juvenil que marcó época.
-                            </p>
-
-                            <strong>
-                                S/ 79
-                            </strong>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- CARD 2 -->
-
-                <div
-                    class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
-                            alt="Portada del libro Algo tan sencillo como tuitear te quiero"
-                            class="card-img-top h-72 object-cover">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-bold">
-                                Algo tan sencillo como tuitear te quiero
-                            </h3>
-
-                            <p class="text-secondary mb-2">
-                                Blue Jeans
-                            </p>
-
-                            <div
-                                class="text-warning"
-                                aria-label="5 de 5 estrellas">
-
-                                ★★★★★
-
-                            </div>
-
-                            <p class="small text-secondary">
-                                Amistad, amor y redes sociales.
-                            </p>
-
-                            <strong>
-                                S/ 85
-                            </strong>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- CARD 3 -->
-
-                <div
-                    class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500"
-                            alt="Portada del libro Una corte de rosas y espinas"
-                            class="card-img-top h-72 object-cover">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-bold">
-                                Una corte de rosas y espinas
-                            </h3>
-
-                            <p class="text-secondary mb-2">
-                                Sarah J. Maas
-                            </p>
-
-                            <div
-                                class="text-warning"
-                                aria-label="5 de 5 estrellas">
-
-                                ★★★★★
-
-                            </div>
-
-                            <p class="small text-secondary">
-                                Fantasía, romance y faeries.
-                            </p>
-
-                            <strong>
-                                S/ 120
-                            </strong>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- CARD 4 -->
-
-                <div
-                    class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500"
-                            alt="Portada del libro Trono de cristal"
-                            class="card-img-top h-72 object-cover">
-
-                        <div class="card-body">
-
-                            <h3 class="h5 fw-bold">
-                                Trono de cristal
-                            </h3>
-
-                            <p class="text-secondary mb-2">
-                                Sarah J. Maas
-                            </p>
-
-                            <div
-                                class="text-warning"
-                                aria-label="5 de 5 estrellas">
-
-                                ★★★★★
-
-                            </div>
-
-                            <p class="small text-secondary">
-                                Una asesina, un rey y mucha magia.
-                            </p>
-
-                            <strong>
-                                S/ 110
-                            </strong>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- 5. SHORT SYNOPSIS-->
-
-    <section
-        id="synopsis"
-        class="py-5">
-
-        <div class="container py-5">
-
-            <div
-                class="row align-items-center g-5">
-
-
-                <!-- TEXTO -->
-
-                <div class="col-lg-5">
-
-                    <p class="small text-secondary">
-                        Reseñas
-                    </p>
-
-
-                    <h2
-                        class="display-6 fw-bold">
-
-                        Reseña destacada
-
-                    </h2>
-
-
-                    <p
-                        class="text-secondary leading-relaxed">
-
-                        Una corte de rosas y espinas: Feyre mata a un lobo
-                        y su vida cambia para siempre. Belleza, peligro y un
-                        romance que atrapa desde la primera página.
-
-                    </p>
-
-
-                    <button
-                        class="btn btn-dark px-4 rounded-lg">
-
-                        Leer reseña
-
-                    </button>
-
-                </div>
-
-
-                <!-- COLLAGE -->
-
-                <div class="col-lg-7">
-
-                    <div
-                        class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
-                            alt="Portada de fantasía juvenil"
-                            class="w-40 h-60 object-cover rounded-xl shadow-lg -rotate-6">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
-                            alt="Libro de romance juvenil"
-                            class="w-48 h-72 object-cover rounded-xl shadow-lg rotate-3">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500"
-                            alt="Saga de Sarah J. Maas"
-                            class="w-36 h-56 object-cover rounded-xl shadow-lg rotate-6">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- 6. FAVOURITE BOOKS-->
-
-    <section
-        class="py-5 bg-white">
-
-        <div class="container py-5">
-
-
-            <!-- TÍTULO -->
-
-            <div
-                class="d-flex justify-content-between align-items-center mb-4">
-
-                <h2
-                    class="fw-bold">
-
-                    Los favoritos de la comunidad
-
-                </h2>
-
-
-                <button
-                    class="btn btn-dark rounded-lg">
-
-                    Ver más
-
-                </button>
-
-            </div>
-
-
-            <!-- GRID -->
-
-            <div class="row g-4">
-
-
-                <!-- BOOK 1 -->
-
-                <div
-                    class="col-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500"
-                            alt="Libro Heartstopper"
-                            class="img-fluid h-64 w-full object-cover rounded-lg">
-
-                        <h3
-                            class="h6 fw-bold text-center mt-3">
-
-                            Heartstopper
-
-                        </h3>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- BOOK 2 -->
-
-                <div
-                    class="col-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
-                            alt="Libro Bajo la misma estrella"
-                            class="img-fluid h-64 w-full object-cover rounded-lg">
-
-                        <h3
-                            class="h6 fw-bold text-center mt-3">
-
-                            Bajo la misma estrella
-
-                        </h3>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- BOOK 3 -->
-
-                <div
-                    class="col-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500"
-                            alt="Libro Los juegos del hambre"
-                            class="img-fluid h-64 w-full object-cover rounded-lg">
-
-                        <h3
-                            class="h6 fw-bold text-center mt-3">
-
-                            Los juegos del hambre
-
-                        </h3>
-
-                    </article>
-
-                </div>
-
-
-
-                <!-- BOOK 4 -->
-
-                <div
-                    class="col-6 col-md-4 col-lg-3">
-
-                    <article
-                        class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?w=500"
-                            alt="Libro Harry Potter y la piedra filosofal"
-                            class="img-fluid h-64 w-full object-cover rounded-lg">
-
-                        <h3
-                            class="h6 fw-bold text-center mt-3">
-
-                            Harry Potter y la piedra filosofal
-
-                        </h3>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!--   7. FORMULARIO -->
-
-    <section
-        id="contact"
-        class="py-5">
-
-        <div class="container py-5">
-
-            <div
-                class="bg-purple-100 rounded-xl shadow-lg p-5">
-
-                <div
-                    class="row justify-content-center">
-
-                    <div
-                        class="col-lg-7 text-center">
 
                         <h2
-                            class="fw-bold">
+                            class="display-6 fw-bold">
 
-                            Únete al club MyLibro
+                            Una comunidad para leer sin filtro
 
                         </h2>
 
 
                         <p
-                            class="text-secondary">
+                            class="text-secondary leading-relaxed">
 
-                            Recibe recomendaciones, reseñas y novedades
-                            de tus autores favoritos.
+                            En MyLibro compartimos reseñas, teorías y recomendaciones
+                            de romance juvenil, fantasía épica y sagas que enganchan
+                            desde la primera página.
 
                         </p>
 
 
-                        <form
-                            class="mt-4"
-                            novalidate>
+                        <p
+                            class="text-secondary leading-relaxed">
+
+                            Si amas a Blue Jeans, Sarah J. Maas o buscas tu próxima
+                            obsesión literaria, este es tu lugar.
+
+                        </p>
 
 
-                            <div class="input-group">
+                        <button
+                            class="btn btn-dark px-4 rounded-lg">
 
-                                <label
-                                    for="newsletterEmail"
-                                    class="visually-hidden">
+                            Conoce más
 
-                                    Correo electrónico
-
-                                </label>
-
-
-                                <input
-                                    id="newsletterEmail"
-                                    type="email"
-                                    class="form-control rounded-start-xl"
-                                    placeholder="Correo electrónico"
-                                    aria-describedby="emailHelp"
-                                    required>
-
-
-                                <button
-                                    type="submit"
-                                    class="btn btn-dark px-4">
-
-                                    Suscribirme
-
-                                </button>
-
-                            </div>
-
-
-                            <div
-                                id="emailHelp"
-                                class="form-text text-start">
-
-                                Ingresa un correo electrónico
-                                válido.
-
-                            </div>
-
-                        </form>
+                        </button>
 
                     </div>
 
@@ -988,34 +533,732 @@
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
 
-    <!--  FOOTER    -->
+        <!-- 4. BEST SELLING BOOKS  <section> -->
+
+        <section
+            id="seccionBooks"
+            class="py-5 bg-white d-none">
+
+            <div class="container py-5">
+
+
+                <!-- ENCABEZADO -->
+
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h2
+                        class="fw-bold mb-0">
+
+                        Libros más vendidos
+
+                    </h2>
+
+
+                    <div class="d-flex gap-2">
+
+                        <button
+                            class="btn btn-dark rounded-lg">
+
+                            Comprar ahora
+
+                        </button>
+
+
+                        <button
+                            class="btn btn-outline-secondary rounded-lg"
+                            aria-label="Libro anterior">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+
+                        <button
+                            class="btn btn-outline-secondary rounded-lg"
+                            aria-label="Siguiente libro">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GRID -->
+
+                <div class="row g-4">
+
+
+                    <!-- CARD 1 -->
+
+                    <div
+                        class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+                            <img
+                                src="https://tse1.mm.bing.net/th/id/OIP.7-gCEDBALY59saYcxMXMjwHaJ3?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Portada del libro Canciones para Paula"
+                                class="card-img-top h-72 object-cover">
+
+                            <div class="card-body">
+
+                                <h3 class="h5 fw-bold">
+                                    Canciones para Paula
+                                </h3>
+
+                                <p class="text-secondary mb-2">
+                                    Blue Jeans
+                                </p>
+
+                                <div
+                                    class="text-warning"
+                                    aria-label="5 de 5 estrellas">
+
+                                    ★★★★★
+
+                                </div>
+
+                                <p class="small text-secondary">
+                                    Romance juvenil que marcó época.
+                                </p>
+
+                                <strong>
+                                    S/ 79
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- CARD 2 -->
+
+                    <div
+                        class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+                            <img
+                                src="https://tse4.mm.bing.net/th/id/OIP.R-3bH7MjgYtVfFPtyjX8TwHaIy?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Portada del libro Algo tan sencillo como tuitear te quiero"
+                                class="card-img-top h-72 object-cover">
+
+                            <div class="card-body">
+
+                                <h3 class="h5 fw-bold">
+                                    Algo tan sencillo como tuitear te quiero
+                                </h3>
+
+                                <p class="text-secondary mb-2">
+                                    Blue Jeans
+                                </p>
+
+                                <div
+                                    class="text-warning"
+                                    aria-label="5 de 5 estrellas">
+
+                                    ★★★★★
+
+                                </div>
+
+                                <p class="small text-secondary">
+                                    Amistad, amor y redes sociales.
+                                </p>
+
+                                <strong>
+                                    S/ 85
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- CARD 3 -->
+
+                    <div
+                        class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+                            <img
+                                src="https://tse2.mm.bing.net/th/id/OIP.ETfHn8xsOwtefPDAEykH9AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Portada del libro Una corte de rosas y espinas"
+                                class="card-img-top h-72 object-cover">
+
+                            <div class="card-body">
+
+                                <h3 class="h5 fw-bold">
+                                    Una corte de rosas y espinas
+                                </h3>
+
+                                <p class="text-secondary mb-2">
+                                    Sarah J. Maas
+                                </p>
+
+                                <div
+                                    class="text-warning"
+                                    aria-label="5 de 5 estrellas">
+
+                                    ★★★★★
+
+                                </div>
+
+                                <p class="small text-secondary">
+                                    Fantasía, romance y faeries.
+                                </p>
+
+                                <strong>
+                                    S/ 120
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- CARD 4 -->
+
+                    <div
+                        class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="card h-100 border-0 rounded-xl shadow-lg overflow-hidden transition duration-300 hover:scale-105">
+
+                            <img
+                                src="https://tse4.mm.bing.net/th/id/OIP.VieoWa4stpccrAccL6jsYgHaJ4?r=0&w=750&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Portada del libro Trono de cristal"
+                                class="card-img-top h-72 object-cover">
+
+                            <div class="card-body">
+
+                                <h3 class="h5 fw-bold">
+                                    Trono de cristal
+                                </h3>
+
+                                <p class="text-secondary mb-2">
+                                    Sarah J. Maas
+                                </p>
+
+                                <div
+                                    class="text-warning"
+                                    aria-label="5 de 5 estrellas">
+
+                                    ★★★★★
+
+                                </div>
+
+                                <p class="small text-secondary">
+                                    Una asesina, un rey y mucha magia.
+                                </p>
+
+                                <strong>
+                                    S/ 110
+                                </strong>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 5. SHORT SYNOPSIS  <section> -->
+
+        <section
+            id="seccionSynopsis"
+            class="py-5 d-none">
+
+            <div class="container py-5">
+
+                <div
+                    class="row align-items-center g-5">
+
+
+                    <!-- TEXTO -->
+
+                    <div class="col-lg-5">
+
+                        <p class="small text-secondary">
+                            Reseñas
+                        </p>
+
+
+                        <h2
+                            class="display-6 fw-bold">
+
+                            Reseña destacada
+
+                        </h2>
+
+
+                        <p
+                            class="text-secondary leading-relaxed">
+
+                            Una corte de rosas y espinas: Feyre mata a un lobo
+                            y su vida cambia para siempre. Belleza, peligro y un
+                            romance que atrapa desde la primera página.
+
+                        </p>
+
+
+                        <button
+                            class="btn btn-dark px-4 rounded-lg">
+
+                            Leer reseña
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- COLLAGE -->
+
+                    <div class="col-lg-7">
+
+                        <div
+                            class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
+                                alt="Portada de fantasía juvenil"
+                                class="w-40 h-60 object-cover rounded-xl shadow-lg -rotate-6">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
+                                alt="Libro de romance juvenil"
+                                class="w-48 h-72 object-cover rounded-xl shadow-lg rotate-3">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=500"
+                                alt="Saga de Sarah J. Maas"
+                                class="w-36 h-56 object-cover rounded-xl shadow-lg rotate-6">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 6. FAVOURITE BOOKS  <section> -->
+
+        <section
+            id="seccionFavorites"
+            class="py-5 bg-white d-none">
+
+            <div class="container py-5">
+
+
+                <!-- TÍTULO -->
+
+                <div
+                    class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h2
+                        class="fw-bold">
+
+                        Los favoritos de la comunidad
+
+                    </h2>
+
+
+                    <button
+                        class="btn btn-dark rounded-lg">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+
+                <!-- GRID -->
+
+                <div class="row g-4">
+
+
+                    <!-- BOOK 1 -->
+
+                    <div
+                        class="col-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
+
+                            <img
+                                src="https://tse3.mm.bing.net/th/id/OIP.Vt7BKXOrbC9F4o4gUL2PsAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Libro Heartstopper"
+                                class="img-fluid h-64 w-full object-cover rounded-lg">
+
+                            <h3
+                                class="h6 fw-bold text-center mt-3">
+
+                                Heartstopper
+
+                            </h3>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- BOOK 2 -->
+
+                    <div
+                        class="col-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
+
+                            <img
+                                src="https://tse2.mm.bing.net/th/id/OIP.VPp437zqMKeNW2AiCmebawHaK-?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Libro Bajo la misma estrella"
+                                class="img-fluid h-64 w-full object-cover rounded-lg">
+
+                            <h3
+                                class="h6 fw-bold text-center mt-3">
+
+                                Bajo la misma estrella
+
+                            </h3>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- BOOK 3 -->
+
+                    <div
+                        class="col-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
+
+                            <img
+                                src="https://tse1.mm.bing.net/th/id/OIP.NcO2DVe4Gn_OC_r2oOK-BwDKEs?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Libro Los juegos del hambre"
+                                class="img-fluid h-64 w-full object-cover rounded-lg">
+
+                            <h3
+                                class="h6 fw-bold text-center mt-3">
+
+                                Los juegos del hambre
+
+                            </h3>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- BOOK 4 -->
+
+                    <div
+                        class="col-6 col-md-4 col-lg-3">
+
+                        <article
+                            class="bg-stone-50 p-4 rounded-xl shadow-sm h-100 transition duration-300 hover:shadow-lg">
+
+                            <img
+                                src="https://tse3.mm.bing.net/th/id/OIP.v1rRvRBtc_9vQvOJb-b2uAHaJ0?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Libro Harry Potter y la piedra filosofal"
+                                class="img-fluid h-64 w-full object-cover rounded-lg">
+
+                            <h3
+                                class="h6 fw-bold text-center mt-3">
+
+                                Harry Potter y la piedra filosofal
+
+                            </h3>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--   7. FORMULARIO  <section> -->
+
+        <section
+            id="seccionContact"
+            class="py-5 d-none">
+
+            <div class="container py-5">
+
+                <div
+                    class="bg-purple-100 rounded-xl shadow-lg p-5">
+
+                    <div
+                        class="row justify-content-center">
+
+                        <div
+                            class="col-lg-7 text-center">
+
+                            <h2
+                                class="fw-bold">
+
+                                Únete al club MyLibro
+
+                            </h2>
+
+
+                            <p
+                                class="text-secondary">
+
+                                Recibe recomendaciones, reseñas y novedades
+                                de tus autores favoritos.
+
+                            </p>
+
+
+                            <form
+                                class="mt-4"
+                                novalidate>
+
+
+                                <div class="input-group">
+
+                                    <label
+                                        for="newsletterEmail"
+                                        class="visually-hidden">
+
+                                        Correo electrónico
+
+                                    </label>
+
+
+                                    <input
+                                        id="newsletterEmail"
+                                        type="email"
+                                        class="form-control rounded-start-xl"
+                                        placeholder="Correo electrónico"
+                                        aria-describedby="emailHelp"
+                                        required>
+
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-dark px-4">
+
+                                        Suscribirme
+
+                                    </button>
+
+                                </div>
+
+
+                                <div
+                                    id="emailHelp"
+                                    class="form-text text-start">
+
+                                    Ingresa un correo electrónico
+                                    válido.
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!--  FOOTER  <footer>  -->
 
     <footer
-        class="border-top bg-white py-4">
+        id="seccionFooter"
+        class="border-top bg-dark text-white py-4 d-none">
 
         <div
             class="container text-center">
 
-            <p
-                class="mb-0 text-secondary">
+             <p
+                class="mb-1 fw-bold tracking-wide">
 
-                © 2026 MyLibro.
-                Todos los derechos reservados.
+                Ingeniería de Sistemas-Noveno Semestre
 
             </p>
+
+            <p
+                class="mb-1 fw-bold tracking-wide">
+
+                Desarrollo de Aplicaciones Web
+
+            </p>
+
+            <p
+                class="mb-3 small text-secondary">
+
+                Brittany Gonzales Quiñonez
+
+            </p>
+
 
         </div>
 
     </footer>
 
+
+
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- PANEL FLOTANTE - LÓGICA -->
+
+    <script>
+
+        const panelToggle = document.getElementById('panelToggle');
+        const panelSecciones = document.getElementById('panelSecciones');
+        const panelIcon = document.getElementById('panelIcon');
+
+        const ordenSecciones = [
+            'seccionNavbar',
+            'seccionHero',
+            'seccionMain',
+            'seccionAbout',
+            'seccionBooks',
+            'seccionSynopsis',
+            'seccionFavorites',
+            'seccionContact',
+            'seccionFooter'
+        ];
+
+        const botones = document.querySelectorAll('.seccion-btn');
+
+        panelToggle.addEventListener('click', () => {
+
+            const abierto = !panelSecciones.classList.contains('d-none');
+
+            panelSecciones.classList.toggle('d-none');
+
+            panelIcon.classList.toggle('bi-code-slash');
+            panelIcon.classList.toggle('bi-x-lg');
+
+            panelToggle.setAttribute('aria-expanded', (!abierto).toString());
+
+        });
+
+        function aplicarEstado(hastaIndice) {
+
+            ordenSecciones.forEach((id, i) => {
+
+                const sec = document.getElementById(id);
+
+                if (!sec) return;
+
+                if (i <= hastaIndice) {
+
+                    sec.classList.remove('d-none');
+
+                } else {
+
+                    sec.classList.add('d-none');
+
+                }
+
+            });
+
+            botones.forEach(btn => {
+
+                const idx = ordenSecciones.indexOf(btn.dataset.target);
+
+                if (idx !== -1 && idx <= hastaIndice) {
+
+                    btn.classList.remove('btn-outline-dark');
+                    btn.classList.add('btn-dark');
+
+                } else {
+
+                    btn.classList.remove('btn-dark');
+                    btn.classList.add('btn-outline-dark');
+
+                }
+
+            });
+
+        }
+
+        botones.forEach(btn => {
+
+            btn.addEventListener('click', () => {
+
+                const idx = ordenSecciones.indexOf(btn.dataset.target);
+
+                if (idx === -1) return;
+
+                aplicarEstado(idx);
+
+            });
+
+        });
+
+
+
+        document.getElementById('mostrarTodo').addEventListener('click', () => {
+      aplicarEstado(ordenSecciones.length - 1);
+        });
+
+        document.getElementById('ocultarTodo').addEventListener('click', () => {
+            aplicarEstado(-1);
+        });
+
+       aplicarEstado(ordenSecciones.length - 1);
+
     </script>
 
 </body>
